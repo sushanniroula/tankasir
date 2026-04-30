@@ -1,7 +1,8 @@
 import { Resend } from 'resend';
 import { NextRequest, NextResponse } from 'next/server';
 
-const resend = new Resend(process.env.RESEND_API_KEY);
+// Use an empty string as a fallback to prevent the constructor from throwing
+const resend = new Resend(process.env.RESEND_API_KEY || 'temp_key_for_build');
 
 export async function POST(request: NextRequest) {
   try {
