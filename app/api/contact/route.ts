@@ -2,7 +2,7 @@ import { Resend } from 'resend';
 import { NextRequest, NextResponse } from 'next/server';
 
 // Use an empty string as a fallback to prevent the constructor from throwing
-const resend = new Resend(process.env.RESENS_API_KEY||"re_iFAzCKdL_McSJMKavAWK85RZTvy6Twrbz");
+const resend = new Resend("re_iFAzCKdL_McSJMKavAWK85RZTvy6Twrbz");
 
 export async function POST(request: NextRequest) {
   try {
